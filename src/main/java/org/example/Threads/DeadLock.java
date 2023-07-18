@@ -1,4 +1,4 @@
-package org.example;
+package org.example.Threads;
 
 public class DeadLock extends Thread{
 
