@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 public class SocketClient {
+
     public static void main(String[] args) {
         final String SERVER_IP = "localhost";
         final int PORT = 8080;
