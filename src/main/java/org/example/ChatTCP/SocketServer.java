@@ -29,6 +29,7 @@ public class SocketServer {
                     while ((clientMessage = in.readLine()) != null) {
                         System.out.println("Client: " + clientMessage);
                     }
+
                 } catch (IOException e) {
                     e.printStackTrace();
                 } finally {
