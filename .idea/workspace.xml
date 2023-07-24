@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f0e4bd9d-214b-4731-9105-620e3236bba2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+    <list default="true" id="f0e4bd9d-214b-4731-9105-620e3236bba2" name="Changes" comment="adds user datagram packets implementation">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/HttpServer/HttpSun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HttpServer/HttpServerWithIO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HttpServer/HttpServerWithIO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Threads/DeadLock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Threads/DeadLock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Threads/Multithreading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Threads/Multithreading.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,16 +52,69 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="Multithreading" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="org.example.Multithreading" />
+  <component name="RunManager" selected="Application.HttpSun">
+    <configuration name="DatagramA" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.ChatUDP.DatagramA" />
       <module name="Multi-threadingSQ16" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.ChatUDP.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatagramB" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.ChatUDP.DatagramB" />
+      <module name="Multi-threadingSQ16" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.ChatUDP.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpServerWithIO" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.HttpServer.HttpServerWithIO" />
+      <module name="Multi-threadingSQ16" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.HttpServer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HttpSun" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.HttpServer.HttpSun" />
+      <module name="Multi-threadingSQ16" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.HttpServer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Multithreading" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.Threads.Multithreading" />
+      <module name="Multi-threadingSQ16" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.Threads.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -74,7 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.HttpSun" />
+        <item itemvalue="Application.HttpServerWithIO" />
         <item itemvalue="Application.Multithreading" />
+        <item itemvalue="Application.DatagramB" />
+        <item itemvalue="Application.DatagramA" />
       </list>
     </recent_temporary>
   </component>
@@ -87,11 +141,75 @@
       <option name="presentableId" value="Default" />
       <updated>1689444382280</updated>
       <workItem from="1689444383736" duration="2315000" />
-      <workItem from="1689447543701" duration="5335000" />
+      <workItem from="1689447543701" duration="27705000" />
+      <workItem from="1689925714735" duration="126000" />
+      <workItem from="1690032660046" duration="498000" />
+      <workItem from="1690047030925" duration="4647000" />
+      <workItem from="1690054552201" duration="4395000" />
     </task>
+    <task id="LOCAL-00001" summary="adds socket implementation">
+      <created>1689665268182</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1689665268182</updated>
+    </task>
+    <task id="LOCAL-00002" summary="adds socket implementation">
+      <created>1689665466629</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1689665466629</updated>
+    </task>
+    <task id="LOCAL-00003" summary="adds socket implementation">
+      <created>1689665687569</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1689665687569</updated>
+    </task>
+    <task id="LOCAL-00004" summary="adds httpserver implementation">
+      <created>1689701521985</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1689701521985</updated>
+    </task>
+    <task id="LOCAL-00005" summary="adds httpserver implementation">
+      <created>1689701619986</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1689701619986</updated>
+    </task>
+    <task id="LOCAL-00006" summary="adds user datagram packets implementation">
+      <created>1689702198093</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1689702198093</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="adds socket implementation" />
+    <MESSAGE value="adds httpserver implementation" />
+    <MESSAGE value="adds user datagram packets implementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="adds user datagram packets implementation" />
   </component>
 </project>

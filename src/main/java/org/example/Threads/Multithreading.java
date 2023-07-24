@@ -1,5 +1,6 @@
 package org.example.Threads;
 
+import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
 
 //CRON JOBS: These unit processes that are tasked to carry out a behaviour/logic after a set period
@@ -43,24 +44,46 @@ public class Multithreading extends Thread{
             System.out.println("thread "+threadNo+" has added 1 and the total is: "+totalValue.get());
     }
     }
+
     public static void main(String[] args) throws InterruptedException {
+
+        //Scheduling with ScheduledExecutorService
+        ScheduledExecutorService service = new ScheduledThreadPoolExecutor(3);
+        service.scheduleAtFixedRate(()->{
+            System.out.println("Hello");
+        }, 0, 2000, TimeUnit.MILLISECONDS);
 
 
         Multithreading multithreading = new Multithreading();
         Multithreading multithreading1 = new Multithreading();
-        MultiThreading3 multiThreading3 = new MultiThreading3();
-        multithreading.setThreadNo(1);
-        multithreading1.setThreadNo(2);
+
+//        MultiThreading3 multiThreading3 = new MultiThreading3();
+//        multithreading.setThreadNo(1);
+//        multithreading1.setThreadNo(2);
         DeadLock deadLock =  new DeadLock();
         deadLock.setThreadNo(4);
 
         multithreading.start();
         multithreading1.start();
-        multithreading.join();
-        multithreading1.join();
-        multiThreading3.addNumber();
-        System.out.println(totalValue.get());
+//        multithreading.join();
+//        multithreading1.join();
+//        multiThreading3.addNumber();
+//        System.out.println(totalValue.get());
         deadLock.start();
+        DeadLockRunnable deadLockRunnable =  new DeadLockRunnable();
+        Thread thread = new Thread(deadLockRunnable);
+        thread.start();
+
+
+
+
+
+
+
+
+
+
+
     }
 
 }
